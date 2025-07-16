@@ -37,7 +37,7 @@ EXPOSE 8000
 # --host 0.0.0.0 makes the server accessible from outside the container
 # --port 8000 specifies the port
 # main:app refers to the 'app' object in 'main.py'
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["python", "-m","uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
 
 # To build this Docker image:
 # 1. Make sure you have Docker Desktop installed and running.
