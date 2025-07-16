@@ -1,4 +1,4 @@
-name: CICD Pipeline for Beer Catalog
+name: Fast API
 on:
   pull_request:
     branches: [ master ]
@@ -39,7 +39,7 @@ jobs:
           tags: ghcr.io/${{ github.actor }}/fastapi:${{ github.ref_name }}
 
       - name: Run Docker container
-        run: docker run -d -p 8000:8000 --name fastapi ghcr.io/${{ github.actor }}/beer:${{ github.ref_name }}
+        run: docker run -d -p 8000:8000 --name fastapi ghcr.io/${{ github.actor }}/fastapi:${{ github.ref_name }}
 
       - name: Wait for API to be ready
         run: sleep 10
