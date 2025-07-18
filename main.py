@@ -16,7 +16,7 @@ async def read_root():
     The 'async' keyword makes it an asynchronous function, which is
     recommended for FastAPI for better performance, especially with I/O-bound tasks.
     """
-    return {"message": "Hello World from FastAPI!"}
+    return {"message": "Hello World from FastAPI! Green"}
 
 # To run this application:
 # 1. Save the code above as a Python file (e.g., main.py).
